@@ -1,2 +1,2 @@
 # AprendendoCPP
-Resolução de exercicios de programação
+Resolução de exercicios de programação.
