@@ -94,25 +94,28 @@ Fim
 
     É o ato de transformar o algoritmo em uma linguagem de programação.
 
-    Através de uma linguagem de programação podemos escrever os passos do algoritmo para transformá-lo em um programa.
+    Através de uma linguagem de programação podemos escrever os passos do algoritmo para transformá-lo em um
+    programa.
             
 ### Liguagem de programação
  
-    A linguagem de programação é um método padronizado, formado por um conjunto de regras sintáticas e semânticas, de
-    escrita de texto chamado de código fonte, que pode ser compilado e transformado em um programa de computador,ou
-    usado como script interpretado, que informará instruções de processamento ao computador.
+    A linguagem de programação é um método padronizado, formado por um conjunto de regras sintáticas e
+    semânticas, de escrita de texto chamado de código fonte, que pode ser compilado e transformado em um
+    programa de computador, ou usado como script interpretado, que informará instruções de processamento
+    ao computador.
     
-    O propósito da linguagem de programação é facilitar a comunicação entre humanos e máquida, visto que a máquina só
-    entende a liguagem de máquina que é zero e um.
+    O propósito da linguagem de programação é facilitar a comunicação entre humanos e máquida, visto que a
+    máquina só entende a liguagem de máquina que é zero e um.
     
-    Para que a máquina entenda o que foi programado, o código fonte precisa ser transformado. Para isso que existe o 
-    compilador. O compilador converte as instruções incluídas no código fonte em zeros e um, e coloca em um arquivo 
-    executável. Este executável é o que podemos chamar de programa.
+    Para que a máquina entenda o que foi programado, o código fonte precisa ser transformado. Para isso que
+    existe o compilador. O compilador converte as instruções incluídas no código fonte em zeros e um, e
+    coloca em um arquivo executável. Este executável é o que podemos chamar de programa.
     
     Existem diversas linguagens de programação, cada uma desenvolvida para diversos propósitos.
     
     Exemplos de liguagem de programação:
-        Assembly, C, C++, C#, Pascal, Object Pascal, ADA, FORTRAN, BASIC, Visual Basic, Java, JavaScript, Python
+        Assembly, C, C++, C#, Pascal, Object Pascal, ADA, FORTRAN, BASIC, Visual Basic, Java, JavaScript,
+        Python dentre outros.
     
     Exemplos de tecnologias que não pode ser confundidas com liguagem de programação:
         HTML, CSS, JQuery, Node.js, React.js, Agular, Vue.js, Bootstrap, Bulma
@@ -160,15 +163,17 @@ Fim
     
 ### Variáveis - O quê são, onde vivem, como se reproduzem.
 
-    Uma variável é um espaço resevado na memória do computador que será utilizado pelo programa durante sua execução.
-    Porque usar variáveis? Vamos pensar no algorítmo de somar três números cidado na seção de algoritmos:
+    Uma variável é um espaço resevado na memória do computador que será utilizado pelo programa durante sua
+    execução. Porque usar variáveis? Vamos pensar no algorítmo de somar três números cidado na seção de
+    algoritmos:
 
         Passo 1: Receber os três números;
         Passo 2: Efetuar a soma dos três números recebidos;
         Passo 3: Informar o resuldado da soma.
 
-    Para escrever este algoritmo na forma de uma estrutura sequencial utilizando a liguagem C, precisaremos conhcer 
-    um novo comando para ler o que o usuário está escrevendo no teclado:
+    Para escrever este algoritmo na forma de uma estrutura sequencial utilizando a liguagem C, precisaremos
+    conhcer um novo comando para ler o que o usuário está escrevendo no teclado:
+
 [Inicio](#introdução-a-programação)
         
 ### Comando scanf()
@@ -186,13 +191,14 @@ scanf("%s",&variavel3);
     - Os parâmetros &variavel1, &variavel2 e &variavel3, determina onde o dado ficará armazenado
         (geralmente uma variável);
     
-    Voltando para o algoritmo de somar três números, no passo 1, não é possível receber os três números de uma única vez.
-    O comando scanf() foi desenvolvido para ler os dados do teclado e armazenar em apenas uma variável. Como precisamos
-    receber três números, será necessário usar o comando para receber o primeiro número, depois usar o comando para receber
-    o segundo número, e por fim, usar o comando novamente para receber o terceiro número.
+    Voltando para o algoritmo de somar três números, no passo 1, não é possível receber os três números de
+    uma única vez. O comando scanf() foi desenvolvido para ler os dados do teclado e armazenar em apenas uma
+    variável. Como precisamos receber três números, será necessário usar o comando para receber o primeiro
+    número, depois usar o comando para receber o segundo número, e por fim, usar o comando novamente para
+    receber o terceiro número.
     
-    Para receber os números com o comando scanf() é necessário especificar as variáveis que armazenarão os números. Para
-    isso é necessário declarar as variáveis.
+    Para receber os números com o comando scanf() é necessário especificar as variáveis que armazenarão os
+    números. Para isso é necessário declarar as variáveis.
     
     Declarar variáveis consiste em associar um espaço de mémoria disponível a um identificador.
     Para declarar variáveis basta seguir o formato a seguir:
@@ -201,7 +207,7 @@ scanf("%s",&variavel3);
         
         Onde:
             <tipo> - É o tipo do dado que será armazenado;
-            <identificador> - É o identificador da vaiável. Um nome que faça sentido com o propósito da variável;
+            <identificador> - Um nome usado para identificar e que faça sentido com o propósito da variável;
             <inicialização> - É necessário para não trazer memória suja para seu programa.
         
     Exemplos:
@@ -225,15 +231,17 @@ scanf("%s",&variavel3);
     Pronto. Com este algoritmo resolvemos o passo 1 do algoritmo para calcular a soma de três números.
         
 
-    O passo 2 diz para efetuar a soma dos três números recebidos para isso precisaremos de fazer o uso de operadores,
-    para efetuar o cálculo e armazenar o resultado em algum lugar(será necessário declarar uma variável para tal).
+    O passo 2 diz para efetuar a soma dos três números recebidos para isso precisaremos de fazer o uso de
+    operadores, para efetuar o cálculo e armazenar o resultado em algum lugar(será necessário declarar uma
+    variável para tal).
+
 [Inicio](#introdução-a-programação)
     
 ### Operadores
 
     Mas afinal o que são operadores?
     
-    Operadores são sinais que efetuam operações entre dois operandos. Calma! Vai ficar claro com os exemplos.
+    Operadores são sinais que efetuam operações entre dois operandos. Calma! Vai ficar claro com exemplos.
     Existem vários tipos de operadores. Vamos consecê-los:
     
 ####  Operador de atribuição
@@ -256,23 +264,24 @@ scanf("%s",&variavel3);
     
     Exmplos:
     
-    Operador    Exemplo     O que faz
-    +           a + b       soma o conteúdo do operando a com o conteúdo do operando b;
-    -           a - b       subtrai o conteúdo do operando b do conteúdo do operando a;
-    *           a * b       multiplica o conteúdo do operando a pelo conteúdo do operando b;
-    /           a / b       obtém o quociente da divisão do conteúdo do operando a pelo conteúdo do operando b;
-    %           a % b       obtém o resto da divisão inteira do conteúdo do operando a pelo conteúdo do operando b;
-    ++          a++         Aumenta o conteúdo do operando a em uma unidade. Também conhecido como icremento;
-    --          a--         Diminui o conteúdo do operando a em uma unidade. Também conhecido com decremento;
+| Operador | Exemplo | O que faz |
+| :---: | :---: | --- |
+| + | a + b | Soma o conteúdo do operando a com o conteúdo do operando b. |
+| - | a - b | Sbtrai o conteúdo do operando b do conteúdo do operando a. |
+| * | a * b | Multiplica o conteúdo do operando a pelo conteúdo do operando b. |
+| / | a / b | Obtém o quociente da divisão do conteúdo do operando a pelo conteúdo do operando b. |
+| % | a % b | Obtém o resto da divisão inteira do conteúdo do operando a pelo conteúdo do operando b. |
+| ++ | a++ | Aumenta o conteúdo do operando a em uma unidade. Também conhecido como icremento. |
+| -- | a-- | Diminui o conteúdo do operando a em uma unidade. Também conhecido com decremento. |
         
     Existem muito mais operadores, mas por enquanto vamos utilizar só esses.
     
-    Para o passo 2 do nosso algorítmo vamos utilizar o operador de soma para somar os três numeros e o operador de atribuição
-    para armazenar o resultado numa variável previamente declarada.
+    Para o passo 2 do nosso algorítmo vamos utilizar o operador de soma para somar os três numeros e o 
+    operador de atribuição para armazenar o resultado numa variável previamente declarada.
     
-    Por fim, vamos exibir o resultado na tela para o usuário no passo 3. Neste caso, será necessário o uso do printf().
-    Para deixar o algorítmo mais amigável, é interessante informar para o usuário o que o programa está esperando. 
-    Então o nosso algoritmo completo ficará assim:
+    Por fim, vamos exibir o resultado na tela para o usuário no passo 3. Neste caso, será necessário o uso
+    do printf(). Para deixar o algorítmo mais amigável, é interessante informar para o usuário o que o
+    programa está esperando. Então o nosso algoritmo completo ficará assim:
 ```    
 ALGORITMO - Calcular a soma de três números:
     Passo 01 - Declarar variável do tipo inteiro com o nome de numero1;
