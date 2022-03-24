@@ -1,11 +1,24 @@
 # Introdução a Programação
 
 ## Sumário
-* Ambiente de desenvolvimento
-* Algoritmos
-* Programação
+- [Introdução a Programação](#introdução-a-programação)
+  - [Sumário](#sumário)
+  - [Ambiente de desenvolvimento](#ambiente-de-desenvolvimento)
+  - [Inicio](#inicio)
+  - [Algoritmos: O quê são, onde vivem, como se reproduzem.](#algoritmos-o-quê-são-onde-vivem-como-se-reproduzem)
+      - [Exemplos:](#exemplos)
+  - [Programação](#programação)
+    - [Definição](#definição)
+    - [Liguagem de programação](#liguagem-de-programação)
+    - [Estrutura Sequencial](#estrutura-sequencial)
+    - [Comando printf()](#comando-printf)
+    - [Variáveis - O quê são, onde vivem, como se reproduzem.](#variáveis---o-quê-são-onde-vivem-como-se-reproduzem)
+    - [Comando scanf()](#comando-scanf)
+    - [Operadores](#operadores)
+      - [Operador de atribuição](#operador-de-atribuição)
+      - [Operadores matemáticos](#operadores-matemáticos)
 
-<hr>
+---
 
 ## Ambiente de desenvolvimento
 
@@ -30,11 +43,13 @@
   - C/C++ Compile Run
   - GitLens
 
-<hr> 
+[Inicio](#introdução-a-programação)
+---
 
 ## Algoritmos: O quê são, onde vivem, como se reproduzem.
 
-### Definição: sequência finita de instruções bem definidas utilizada para solucionar um problema.
+    Definição:
+    Sequência finita de instruções bem definidas utilizada para solucionar um problema.
 
 #### Exemplos:
 
@@ -70,10 +85,14 @@ Calcular a soma de três números
     Passo 3: Informar o resuldado da soma.
 Fim
 ```
+[Inicio](#introdução-a-programação)
+
         
 ## Programação
 
-### Definição: É o ato de transformar o algoritmo em uma linguagem de programação.
+### Definição
+
+    É o ato de transformar o algoritmo em uma linguagem de programação.
 
     Através de uma linguagem de programação podemos escrever os passos do algoritmo para transformá-lo em um programa.
             
@@ -97,6 +116,8 @@ Fim
     
     Exemplos de tecnologias que não pode ser confundidas com liguagem de programação:
         HTML, CSS, JQuery, Node.js, React.js, Agular, Vue.js, Bootstrap, Bulma
+
+[Inicio](#introdução-a-programação)
 
 ### Estrutura Sequencial
 
@@ -123,7 +144,9 @@ Fim
         return 0;
     } 
 ```
-#### Comando printf()
+[Inicio](#introdução-a-programação)
+
+### Comando printf()
 
     Este comando é utilizado para imprimir um texto na tela;
     
@@ -133,6 +156,7 @@ Fim
     printf("Vou usar bastante este comando.");    
     printf("Eu nunca vou escquecer ele.");    
 ```    
+[Inicio](#introdução-a-programação)
     
 ### Variáveis - O quê são, onde vivem, como se reproduzem.
 
@@ -145,8 +169,9 @@ Fim
 
     Para escrever este algoritmo na forma de uma estrutura sequencial utilizando a liguagem C, precisaremos conhcer 
     um novo comando para ler o que o usuário está escrevendo no teclado:
+[Inicio](#introdução-a-programação)
         
-#### Comando scanf()
+### Comando scanf()
 
     Este comando é utilizado para ler o teclado do computador;
     
@@ -202,13 +227,18 @@ scanf("%s",&variavel3);
 
     O passo 2 diz para efetuar a soma dos três números recebidos para isso precisaremos de fazer o uso de operadores,
     para efetuar o cálculo e armazenar o resultado em algum lugar(será necessário declarar uma variável para tal).
+[Inicio](#introdução-a-programação)
     
+### Operadores
+
     Mas afinal o que são operadores?
     
     Operadores são sinais que efetuam operações entre dois operandos. Calma! Vai ficar claro com os exemplos.
     Existem vários tipos de operadores. Vamos consecê-los:
     
-####  Operador de atribuição - Utilizado para atribuir o conteúdo de um operando a outro operando.
+####  Operador de atribuição
+
+    Utilizado para atribuir o conteúdo de um operando a outro operando.
     
     Exemplo:
         a = b;
@@ -218,8 +248,11 @@ scanf("%s",&variavel3);
     Neste exemplo eu estou atribuindo o conteúdo do operando b no operando a.
     Se em antes desta sentença o conteúdo de a for 3 e o conteúdo de b for 5, após a execução desta sentença
     o conteúdo de a será 5. Exatamente igual ao conteúdo de b.
+[Inicio](#introdução-a-programação)
         
-#### Operadores matemáticos - Utilizados para fazer operações matemáticas entre operando.
+#### Operadores matemáticos
+    
+    Utilizados para fazer operações matemáticas entre operando.
     
     Exmplos:
     
@@ -288,3 +321,4 @@ int main()
     return 0;
 }        
 ```
+[Inicio](#introdução-a-programação)
