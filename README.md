@@ -36,7 +36,8 @@
             Passo 7: Pegar o hamurger;
             Passo 8: Fritar o hamburger;
             Passo 9: Colocar o hamburger no pão.
-            
+```
+```            
         Trocar uma lâmpada
             Passo 1: Pegar uma lâmpada nova;
             Passo 2: Pegar uma escada;
@@ -48,7 +49,8 @@
             Passo 8: Testar interruptor;
             Passo 9: Guardar a escada;
             Passo 10: Jogar a lampada velha no lixo.
-
+```            
+```            
         Calcular a soma de três números
             Passo 1: Receber os três números;
             Passo 2: Efetuar a soma dos três números recebidos;
