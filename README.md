@@ -17,6 +17,19 @@
     - [Operadores](#operadores)
       - [Operador de atribuição](#operador-de-atribuição)
       - [Operadores matemáticos](#operadores-matemáticos)
+    - [Estruturas Condicionais](#estruturas-condicionais)
+      - [Operadores Relacionais](#operadores-relacionais)
+      - [Estutura IF](#estutura-if)
+      - [Estrutura SWITCH](#estrutura-switch)
+    - [Estruturas de Repetições](#estruturas-de-repetições)
+      - [Estrutura WHILE](#estrutura-while)
+      - [Estrutura DO WHILE](#estrutura-do-while)
+      - [Operadores Lógicos booleanos](#operadores-lógicos-booleanos)
+      - [Estrutura FOR](#estrutura-for)
+    - [Funções](#funções)
+    - [Tipos de Dados Complexos](#tipos-de-dados-complexos)
+    - [Alocação Dinânamica de Memória](#alocação-dinânamica-de-memória)
+    - [Arquivos](#arquivos)
 
 ---
 
@@ -134,6 +147,12 @@ Fim
     
     int main()
     {
+        //As declarações das variáveis demem estar aqui.
+
+
+        //Comando para limpar a tela antes de executar os comados seguintes.
+        system("CLS");
+
         //Sua estrutura sequencial vai aqui.
         
         Instrução em C
@@ -141,7 +160,9 @@ Fim
         Instrução em C
         Instrução em C
     
-        
+        //Comando para solicitar ao usuário para precionar alguma tecla para terminar a aplicação.
+        system("PAUSE");
+
         //Comando que termina a aplicação e retorna o controle para o sistema operacional
         //O Zero informa para o sistema operacional que o programa foi conluído com sucesso.
         return 0;
@@ -262,7 +283,7 @@ scanf("%s",&variavel3);
     
     Utilizados para fazer operações matemáticas entre operando.
     
-    Exmplos:
+    Vamos conhecê-los:
     
 | Operador | Exemplo | O que faz |
 | :---: | :---: | --- |
@@ -331,3 +352,612 @@ int main()
 }        
 ```
 [Inicio](#introdução-a-programação)
+
+### Estruturas Condicionais
+
+    São utilizadas para tomada de decisões. Através desta estrutura o programa avalia uma condição. Esta
+    condição sempre será verdadeira ou falsa. Mas como se analisa condições? Através de operadores
+    relacionais.
+
+#### Operadores Relacionais
+
+    São operadores que comparam um operando com outro operando.
+
+    Vamos conhecê-los:
+
+| Operador | Exemplo | O que faz |
+| :---: | :---: | --- |
+| == | a == b | Verifica se o conteúdo de a é igual ao conteúdo de b. |
+| > | a > b | Verifica se o conteúdo de a é maior que o conteúdo de b. |
+| >= | a >= b | Verifica se o conteúdo de é maior ou igual ao conteúdo de b. |
+| < | a < b | Verifica se o conteúdo de a é menor que o conteúdo de b. |
+| <= | a <= b | Verifica se o conteúdo de a é menor ou igual ao conteúdo de b. |
+| != | a != b | Verifica se o conteúdo de a é diferente do conteúdo de b. |
+
+    O resultado a operação sempre será FALSO ou VERDADEIRO. Este tipo de dado é camado de dado do tipo
+    booleano. Dados booleanos são dados que possuem apenas dois estados. Ou ele vai ser falso, ou vai ser
+    verdadeiro. A maioria das linguagens de programação possui um tipo de dado específico para representar
+    dados booleanos. Contudo, a linguagem C não possui este tipo de dado. Para representar dados booleanos
+    na liguagem C, vamos utilizar o tipo int.
+
+    Por convenção, operações que retornam dados booleanos, sempre retornará zero ou um.
+    Onde:
+
+    Zero - será o valor booleano FALSO;
+    Um - Será o valor booleano FERDADEIRO.
+
+    Exemplo:
+
+```C
+
+// A variável valorBooleano1 declarada abaixo é do tipo int e está sendo inicializada com o número 1.
+// Portanto esta variável pode ser tratada como variável do tipo booleana cujo seu valor é VERDADEIRO.
+int valorBooleano1 = 1;  
+
+// A variável valorBooleano2 declarada abaixo também é do tipo int e está sendo inicializada com o número 0.
+// Esta variável também pode ser tratada como variável do tipo booleana, mas com valor é FALSO.
+int valorBooleano2 = 0;  
+
+// Podemos fazer operações booleanas com operadores relacionais e armazenar o resultado em uma variável:
+//Vamos declarar uma série de variáveis.
+int a = 2;
+int b = 3
+
+char c = 'M';
+char d = 'O';
+char e = 'm';
+
+int res;
+
+//Vamos fazer algumas operaçõs booleandas e armazenar o resultado na variável res:
+
+res = a > b;        //O resultado será 0. Portanto FALSO.
+res = a < b;        //O resultado será 1. Portanto VERDADEIRO.
+res = a == b;       //O resultado será 0. Portanto FALSO.
+res = a != b;       //O resultado será 1. Portanto VERDADEIRO.
+
+
+res = c == d        //O resultado será 0. Portanto FALSO.
+res = d == 'O';     //O resultado será 1. Portanto VERDADEIRO.
+res = c == e;       //O resultado será 0. Portanto FALSO.
+
+```
+
+#### Estutura IF
+
+    Operações booleanas são necessárias para tomada de decisão. A estrutura IF testa se o resultado de uma
+    operação booleana é verdadeira ou falsa. Se a operação for verdadeira, ela executa um bloco de código.
+    Caso contrário, ela não executa o bloco de código, ou executa um bloco alternativo. Existem três fomras
+    de construir esta estrutura. Vamos conhecê-las:
+
+```C
+
+//Preparação
+char resposta;
+float nota;
+
+printf("Quer comprar p%co caseiro(S/N)? ", 132);
+scanf("%c", &resposta);
+
+// Primeira forma do IF
+if(resposta == 's')
+{
+    // Se o usuário digitar s, este bloco será executado e esta mensagem aparecerá para o usuário.
+    printf("Aqui est%c o seu p%co, obrigado!\n",160, 132);
+}
+
+printf("Gostou da comida(S/N)? ");
+scanf("%c", &resposta);
+
+
+// Segunda forma do IF
+if(resposta == 's')
+{
+    // Se o usuário digitar s, este bloco será executado e esta mensagem aparecerá para o usuário.
+    printf("Que bom! Fique a vontade para pegar mais.\n");
+} 
+else
+{
+    // Se o usuário digitar qualquer coisa diferente de s, este bloco será executado e esta mensagem
+    //aparecerá para o usuário.
+    printf("Que pena! Vou melhorar da pr%cxima vez.\n", 162);
+
+}
+
+printf("Digite a nota final do aluno: ");
+scanf("%f", &nota);
+
+// Terceira forma do IF
+if(nota >= 8.00)
+{
+    // Se o usuário digitar um número maior ou igual a 8, este bloco será executado.
+    printf("O Conceito deste aluno %c A. APROVADO!\n", 130);
+}
+else if (nota >= 6)
+{
+    // Se a condição anterior for falsa, este bloco será executado.
+    printf("O Conceito deste aluno %c B. APROVADO!\n", 130);
+}
+else if (nota >= 4)
+{
+    // Se a condição anterior for falsa, este bloco será executado.
+    printf("O Conceito deste aluno %c C. RECUPERA%c%cO!\n", 130, 128, 142);
+}
+else if (nota >= 2)
+{
+    // Se a condição anterior for falsa, este bloco será executado.
+    printf("O Conceito deste aluno %c D. REPROVADO!\n", 130);
+}
+else
+{
+    // Se todas as condições anteriores forem falsas, este bloco será executado.
+    printf("O Conceito deste aluno %c F. REPROVADO!\n", 130);
+}
+
+
+```
+
+#### Estrutura SWITCH
+
+    Existem situações em que precisamos analisar o resultado de uma única sentença e agir de forma diferente
+    dependendo do seu valor. É o caso de um menu. Um menu é uma lista com várias opções. Dependendo da opção
+    escolhida, uma ação será executada. Podemos fazer este menu usando a estrutura IF.
+
+```C
+
+int opcao;
+
+printf("Escolha uma op%c%co:\n", 135, 132);
+
+printf("1 - Cadastros:\n");
+printf("2 - Pedidos:\n");
+printf("3 - Vendas:\n");
+printf("4 - Financeiro:\n");
+printf("5 - Relat%crios\n", 162);
+printf("6 - Ajuda\n");
+printf("7 - Sair\n");
+
+scanf("%d", &opcao);
+
+if(opcao == 1)
+{
+    prinf("Você escolheu Cadastro!\n");
+}
+else if(opcao == 2)
+{
+    printf("Você escolheu Pedidos:\n");
+}
+else if(opcao == 3)
+{
+    printf("Você escolheu Vendas:\n");
+}
+else if(opcao == 4)
+{
+    printf("Você escolheu Financeiro:\n");
+}
+else if(opcao == 5)
+{
+    printf("Você escolheu Relat%crios\n", 162);
+}
+else if(opcao == 6)
+{
+    printf("Você escolheu Ajuda\n");
+}
+else
+{
+    printf("Você escolheu Sair\n");
+}
+
+```
+
+    Agora Imagine um menú com 20 opções. Você teria que escrever um if para cada opção do menu. Além disso
+    Durante a execução do programa, o computador iria analizar cada codição dependendo do que o usuário
+    optou. Isso pode se tornar um problema de leitura do código e de processamento. Existe uma forma de simplificar este código, o tornando mais elegante e performático. Para isso usaremao a estrutura SWITCH.
+    O SWITCH testa a variável em questão uma única vez e executa o bloco correspondente. Isto deixa o código
+    mais limpo e fácil de entender. 
+
+    Vejamos como seria o menu com o SWITCH:
+
+```C
+
+int opcao;
+
+printf("Escolha uma op%c%co:\n", 135, 132);
+
+printf("1 - Cadastros:\n");
+printf("2 - Pedidos:\n");
+printf("3 - Vendas:\n");
+printf("4 - Financeiro:\n");
+printf("5 - Relat%crios\n", 162);
+printf("6 - Ajuda\n");
+printf("7 - Sair\n");
+
+scanf("%d", &opcao);
+
+// O SWITCH vai testar a variável opcao uma única vez. Caso ela seja um dos valores que estão na frente da
+// cláusula CASE, o bloco correspondente será executado. Se o usuário digitar algum valor que não foi
+// definido, a cláusula DEFAULT é executada.
+switch(opcao)
+{
+    case 1:
+        prinf("Você escolheu Cadastro!\n");
+        break;
+    case 2:
+        printf("Você escolheu Pedidos:\n");
+        break;
+    case 3:
+        printf("Você escolheu Vendas:\n");
+        break;
+    case 4:
+        printf("Você escolheu Financeiro:\n");
+        break;
+    case 5:
+        printf("Você escolheu Relat%crios\n", 162);
+        break;
+    case 6:
+        printf("Você escolheu Ajuda\n");
+        break;
+    case 7:
+        printf("Você escolheu Sair\n");
+        break;
+    default:
+        printf("Escolha uma op%c%co v%clida!\n", 135, 132, 160);
+        break;
+}
+
+return 0;
+
+```
+
+### Estruturas de Repetições
+
+    No exemplo anterior construímos um menu. Se o usuário digitar qualquer coisa diferente de 1,2,3,4,5,6,7,
+    a cláusula DEFAULT será executada e a mensagem "Escolha uma opção válida" será exibida. O problema é
+    que depois que esta mensagem é exibida, o programa termina. Seria interessante exibir o menu para o
+    usuário novamente, para ele digitar uma opção válida.
+
+#### Estrutura WHILE
+
+    Podemos resolver este tipo de problema com a estrutura de repetição WHILE. Este tipo de estrutura testa
+    uma condição. Enquanto esta condição for verdadeira, ela executa um bloco de código.
+
+    Então, para o nosso menu, enquando o usuário não digitar uma opção válida, o menu será exeibido na tela.
+
+    O código vai ficar assim:
+
+```C
+
+int opcao;
+
+system("CLS");
+
+printf("Escolha uma op%c%co:\n", 135, 132);
+
+printf("1 - Cadastros:\n");
+printf("2 - Pedidos:\n");
+printf("3 - Vendas:\n");
+printf("4 - Financeiro:\n");
+printf("5 - Relat%crios\n", 162);
+printf("6 - Ajuda\n");
+printf("7 - Sair\n");
+
+scanf("%d", &opcao);
+
+switch(opcao)
+{
+    case 1:
+        prinf("Você escolheu Cadastro!\n");
+        break;
+    case 2:
+        printf("Você escolheu Pedidos:\n");
+        break;
+    case 3:
+        printf("Você escolheu Vendas:\n");
+        break;
+    case 4:
+        printf("Você escolheu Financeiro:\n");
+        break;
+    case 5:
+        printf("Você escolheu Relat%crios\n", 162);
+        break;
+    case 6:
+        printf("Você escolheu Ajuda\n");
+        break;
+    case 7:
+        printf("Você escolheu Sair\n");
+        break;
+    default:
+        printf("Escolha uma op%c%co v%clida!\n", 135, 132, 160);
+        break;
+}
+
+// O WHILE vai teste o valor da variável opcao. Se ela for maior que 7, significa que o usuário informou um
+// valor inválido. Então ele executa o que está no seu bloco. Quando ele executa o último comando do seu
+// bloco, ele testa novamente a variável opcao. Se o usario digitou um valor maior que 7, o bloco será 
+// executado novamente. O programa vai ficar neste loop enquanto a variável opcao for maior que 7.
+
+while(opcao > 7)
+{
+    system("CLS");
+
+    printf("Escolha uma op%c%co:\n", 135, 132);
+
+    printf("1 - Cadastros:\n");
+    printf("2 - Pedidos:\n");
+    printf("3 - Vendas:\n");
+    printf("4 - Financeiro:\n");
+    printf("5 - Relat%crios\n", 162);
+    printf("6 - Ajuda\n");
+    printf("7 - Sair\n");
+
+    scanf("%d", &opcao);
+
+    switch(opcao)
+    {
+        case 1:
+            prinf("Você escolheu Cadastro!\n");
+            break;
+        case 2:
+            printf("Você escolheu Pedidos:\n");
+            break;
+        case 3:
+            printf("Você escolheu Vendas:\n");
+            break;
+        case 4:
+            printf("Você escolheu Financeiro:\n");
+            break;
+        case 5:
+            printf("Você escolheu Relat%crios\n", 162);
+            break;
+        case 6:
+            printf("Você escolheu Ajuda\n");
+            break;
+        case 7:
+            printf("Você escolheu Sair\n");
+            break;
+        default:
+            printf("Escolha uma op%c%co v%clida!\n", 135, 132, 160);
+            break;
+    }
+
+}
+
+return 0;
+
+```
+
+    Tem um problema com o código acima. Existe código duplicado no programa. O menu e a estrutura SWITCH.
+    A princípio isso não implica na performance, mas para leitura do código fica enfadonho. Podemos resolver
+    isso com outra estrutura.
+
+#### Estrutura DO WHILE
+
+    A as estruturas WHILE e DO WHILE fazem a mesma coisa. Elas elas executam um bloco de código enquanto uma
+    condição for verdadeira. O grande diferencial entre elas é que a WHILE, primeiro testa a condição e, se
+    a condição for verdadeira, executa o bloco de codigo, enquanto esta condição for verdadeira. Já a DO
+    WHILE, executa o bloco de código, testa uma condição, e executa o bloco de codigo enquanto a condição
+    for verdadeira.
+
+    Resumindo, a While nem chega executar seu bloco de codigos se a condição for falsa. Já a DO WHILE
+    executa seu bloco de código pelo meno uma vez.
+
+    Vamos ver isso:
+
+```C
+
+int opcao;
+
+
+// O bloco será executado pelo menos uma vez.
+do
+{
+    system("CLS");
+
+    printf("Escolha uma op%c%co:\n", 135, 132);
+
+    printf("1 - Cadastros:\n");
+    printf("2 - Pedidos:\n");
+    printf("3 - Vendas:\n");
+    printf("4 - Financeiro:\n");
+    printf("5 - Relat%crios\n", 162);
+    printf("6 - Ajuda\n");
+    printf("7 - Sair\n");
+
+    scanf("%d", &opcao);
+
+    switch(opcao)
+    {
+        case 1:
+            prinf("Você escolheu Cadastro!\n");
+            break;
+        case 2:
+            printf("Você escolheu Pedidos:\n");
+            break;
+        case 3:
+            printf("Você escolheu Vendas:\n");
+            break;
+        case 4:
+            printf("Você escolheu Financeiro:\n");
+            break;
+        case 5:
+            printf("Você escolheu Relat%crios\n", 162);
+            break;
+        case 6:
+            printf("Você escolheu Ajuda\n");
+            break;
+        case 7:
+            printf("Você escolheu Sair\n");
+            break;
+        default:
+            printf("Escolha uma op%c%co v%clida!\n", 135, 132, 160);
+            break;
+    }
+
+// Só depois de executar o bloco é que o teste é feito. Se o teste for verdadeiro, o bloco é executado
+// novamente. Se o teste for falso, o loop é encerrado.
+}while(opcao > 7);
+
+return 0;
+
+```
+    Há outro problema com o menu. Se o usuário digitar 0, será um valor inválido mas não há nenhuma
+    tratativa para esta opção. O usuário também poderá digitar valores negativos. Podemos tratar este tipo de situação fazendo com que o a execução do bloco repita apenas quando a variável
+    opção for diferente menor que 1 e maior que 7. Assim, quando o usuário digitar zero ou um
+    número negativo, o bloco de código será repetido.
+
+#### Operadores Lógicos booleanos
+
+    Para combinar duas ou mais condições precisaremos fazer uso de operadores lógicos. Ele são utilizados quando é necessário usar duas ou mais condições dentro da mesma sentença.
+
+    Vamos conhecê-los:
+
+| Operador | Exemplo | O que faz |
+| :---: | :---: | --- |
+| && | a && b | AND ou E. Também conhecido como multiplicação booleana. |
+| \|\| | a \|\| b | OR ou OU. Também conhecido como soma booleana.|
+| ^ | a ^ b | XOR ou XOU. Este operador difícilmente é usado. |
+| ! | !a | NOT ou NÃO. Também conhecido como negação.|
+
+    Para entender como esses oeradores funcionam, vamos partir do pricípio que A e B são variáveis
+    booleanas. A seguir amos ver a tabela verdade de cada um desses operadores.
+
+
+Operador &&
+
+| A | B | A && B |
+| :---: | :---: | :---: |
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+Operador ||
+
+| A | B | A \|\| B |
+| :---: | :---: | :---: |
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+Operador ^
+
+| A | B | A \|\| B |
+| :---: | :---: | :---: |
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+Operador !
+
+| A | A ! B |
+| :---: | :---: |
+| 0 | 1 |
+| 1 | 0 |
+
+    Voltando ao problema do menu, precisamos o menu seja exibido equanto o usuário digitar um 
+    número inválido. Em outras palavras, equando opcao for menor que ou opcao for maior que 7.
+    Escrevendo isso em C ficaria assim:
+
+```C
+(opcao < 1); // opcao menor que 1.
+(opcao > 7); // opcao maior que 7.
+
+//Juntado as duas condições com o operador ||
+
+((opcao < 1) || (opcao > 7)); //opcao menor que 1 OU opcao maior que 7
+
+```
+
+    Vamos substituir esta condição combinada no nosso menu. Note que para ficar organizado o uso
+    do parentese se faz necessário. O código vai ficar assim:
+
+```C
+
+int opcao;
+
+
+// O bloco será executado pelo menos uma vez.
+do
+{
+    system("CLS");
+
+    printf("Escolha uma op%c%co:\n", 135, 132);
+
+    printf("1 - Cadastros:\n");
+    printf("2 - Pedidos:\n");
+    printf("3 - Vendas:\n");
+    printf("4 - Financeiro:\n");
+    printf("5 - Relat%crios\n", 162);
+    printf("6 - Ajuda\n");
+    printf("7 - Sair\n");
+
+    scanf("%d", &opcao);
+
+    switch(opcao)
+    {
+        case 1:
+            prinf("Você escolheu Cadastro!\n");
+            break;
+        case 2:
+            printf("Você escolheu Pedidos:\n");
+            break;
+        case 3:
+            printf("Você escolheu Vendas:\n");
+            break;
+        case 4:
+            printf("Você escolheu Financeiro:\n");
+            break;
+        case 5:
+            printf("Você escolheu Relat%crios\n", 162);
+            break;
+        case 6:
+            printf("Você escolheu Ajuda\n");
+            break;
+        case 7:
+            printf("Você escolheu Sair\n");
+            break;
+        default:
+            printf("Escolha uma op%c%co v%clida!\n", 135, 132, 160);
+            break;
+    }
+
+// Só depois de executar o bloco é que o teste é feito. Se o teste for verdadeiro, o bloco é executado
+// novamente. Se o teste for falso, o loop é encerrado.
+}while((opcao < 1) || (opcao > 7));
+
+return 0;
+
+```
+
+#### Estrutura FOR
+
+    Agorra digamos que você queira que um bloco de código seja executado um número definido de vezes.
+    Por exemplo, que quero que o computador mostre na tela a frase "Glóriais... a Deuxxx!" dez vezes.
+    Podemos escrever o comando printf dez vezes. Mas isso não é prático. Se eu quisesse imprimir 1000 vezes
+    como seria isso?
+
+    Neste caso será necessário o uso da estrutura FOR:
+
+```C
+
+int i;  //Esta variável é será usada como variável de controle FOR.
+
+for(i = 0; i < 100; i++)
+{
+    printf("Gl%criais... a Deuxxx!", 162);
+}
+
+```
+
+    O for sempre tará esta a seguinte estrutura:
+    for ( expressão_inicial ; condição ; controle ) statement
+
+### Funções
+
+### Tipos de Dados Complexos
+
+### Alocação Dinânamica de Memória
+
+### Arquivos
